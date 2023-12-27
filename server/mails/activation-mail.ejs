@@ -6,49 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zcode Education Activation Email</title>
     <style>
-      * {
-        font-family: sans-serif;
-        padding: 0;
-        /* box-sizing: border-box; */
-      }
-      .container {
-        width: 600px;
-        background-color: rgb(218, 218, 166);
-        padding: 0%;
+      body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
 
-        border-radius: 5px;
-      }
-      .header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        background-color: rgb(195, 161, 227);
-        border-radius: 5px;
-      }
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #007bff;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+    }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="header">
-        <h2>Welcome to Zcode <%= user.name %>,</h2>
-      </div>
-      <div class="bodyContainer">
-        <p style="text-transform: uppercase">
-          Thank you for registering with Zcode!
-        </p>
-        <p
-          style="text-transform: uppercase; font-size: 1.1em; font-weight: 600"
-        >
-          your activation code is : <%=activationCode %>
-        </p>
-        <p>Please enter the code on the activation code with in 5 minutes</p>
-        <p>
-          If you did not register for Zcode account, please ignore this email
-        </p>
-        <p>Feel free to contact us for more details : 9999999999</p>
-      </div>
+      <h1 style="text-transform: capitalize;">Hello, <%= user.name %>!</h1>
+      <p style="width: 100%;">This is your activation code for Zcode : <span style="font-weight: bold;"><%=activationCode  %></span></p>
+      <p>This activation code is only valid for next 5 minutes</p>
+      <p>Ignore the message if you didn't try to register</p>
+      <footer>
+        Sent with ❤️ from Zcode edu
+      </footer>
     </div>
   </body>
 </html>
